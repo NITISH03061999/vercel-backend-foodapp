@@ -7,9 +7,9 @@ const port = process.env.PORT || 5000;
 
 mongoDB();
 app.use(cors({
-  origin: "https://food-deliverry-app-frontend.vercel.app/", // Your frontend URL
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  origin: ['http://localhost:5173', 'https://food-deliverry-app-frontend.vercel.app'],
+  methods: ['GET', 'POST','DELETE','UPDATE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.get("/", (req, res) => {
   res.send("HelloWorld");

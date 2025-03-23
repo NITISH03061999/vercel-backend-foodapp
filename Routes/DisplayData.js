@@ -1,15 +1,15 @@
-const express = require("express");
-const router = express.Router();
+    const express = require("express");
+    const router = express.Router();
 
 
- router.post('/fooddata',(req,res)=>{
-    try {
-        res.send([global.food_items, global.food_Category])
-    } catch (error) {
-        console.log(error);
-        res.send('server error')
-        
-    }
- })
+    router.post('/fooddata',(req,res)=>{
+        try {
+            res.send([global.food_items, global.food_Category])
+        } catch (error) {
+            console.log(error);
+            res.send('server error')
+            
+        }
+    })
 
- module.exports=router;
+    module.exports=router;
