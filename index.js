@@ -2,12 +2,11 @@ const express = require("express");
 const app = express();
 const mongoDB = require('./db')
 const cors = require("cors");
-
 const port = process.env.PORT || 5000;
 
 mongoDB();
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://food-deliverry-app-frontend.vercel.app'],
+  origin:'*',
   methods: ['GET', 'POST','DELETE','UPDATE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
